@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: ./client  # React project folder
+    ports:
+      - "3000:3000"      # React app exposed on port 3000
+    environment:
+      - CHOKIDAR_USEPOLLING=true   # Fixes React hot reloading issue in Docker
+
+  backend:
+    build:
+      context: ./           # Flask backend in the root directory
+    ports:
+      - "5000:5000"      # Flask app exposed on port 5000
+    environment:
+      - FLASK_ENV=production
+    volumes:
+      - ./:/app           # Mount the root directory into the container
