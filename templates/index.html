@@ -1,35 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>5G Optimization Prediction</title>
-</head>
-<body>
-    <h2>📡 Enter Case Details</h2>
-    
-    <!-- Form to collect input data -->
-    <form action="/predict" method="post">
-        <label>Description:</label><br>
-        <textarea name="description" rows="4" cols="50" required></textarea><br><br>
+    <!-- Link to the CSS file -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>5G Optimization Predictor</h1>
+      <form method="POST" action="/predict">
+        <label for="description">Description</label>
+        <input type="text" id="description" name="description" required />
 
-        <label>Resource Allocation Strategy:</label><br>
-        <input type="text" name="resource" required><br><br>
+        <label for="resource">Resource Allocation Strategy</label>
+        <input type="text" id="resource" name="resource" required />
 
-        <label>Throughput Maximization Outcome:</label><br>
-        <input type="text" name="throughput" required><br><br>
+        <label for="throughput">Throughput Maximization Outcome</label>
+        <input type="text" id="throughput" name="throughput" required />
 
-        <label>Load Balancing Outcome:</label><br>
-        <input type="text" name="load" required><br><br>
+        <label for="load">Load Balancing Outcome</label>
+        <input type="text" id="load" name="load" required />
 
-        <input type="submit" value="Predict">
-    </form>
+        <button type="submit">Predict</button>
+      </form>
 
-    <br>
-    
-    <!-- Display prediction result -->
-    {% if prediction_text %}
-        <h3 style="color: green;">{{ prediction_text }}</h3>
-    {% endif %}
-</body>
+      {% if prediction_text %}
+      <div class="result">{{ prediction_text }}</div>
+      {% endif %}
+    </div>
+  </body>
 </html>

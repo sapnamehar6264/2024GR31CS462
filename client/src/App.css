@@ -1,0 +1,108 @@
+/* App.css */
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #121212, #1f1f1f);
+  color: #f0f0f0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app-container {
+  background: rgba(30, 30, 30, 0.9);
+  padding: 2rem;
+  border-radius: 1.2rem;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #6ec1e4;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+label {
+  font-weight: bold;
+  color: #bbbbbb;
+}
+
+input {
+  padding: 0.7rem;
+  background: #2a2a2a;
+  border: 1px solid #444;
+  border-radius: 8px;
+  color: #f0f0f0;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+input:focus {
+  border-color: #6ec1e4;
+  background-color: #333;
+}
+
+button {
+  padding: 0.8rem;
+  background: linear-gradient(135deg, #6ec1e4, #8843e1);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #8843e1, #6ec1e4);
+}
+
+.prediction-box {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: #222;
+  border: 1px solid #444;
+  color: #00ffcc;
+  font-weight: bold;
+  text-align: center;
+}
+
+select {
+  padding: 0.7rem;
+  background: #2a2a2a;
+  border: 1px solid #444;
+  border-radius: 8px;
+  color: #f0f0f0;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+select:focus {
+  border-color: #6ec1e4;
+  background-color: #333;
+}
+
+/* Responsive: Mobile first */
+@media (max-width: 500px) {
+  .app-container {
+    padding: 1rem;
+    width: 95%;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+}
