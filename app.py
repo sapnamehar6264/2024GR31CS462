@@ -1,7 +1,8 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS
 import pandas as pd
 import joblib
+
 
 app = Flask(__name__)
 CORS(app)
@@ -13,6 +14,9 @@ label_encoder = joblib.load('model/label_encoder.pkl')
 
 # Load CSV for dropdown options
 df = pd.read_csv("5GNetworkOptimization (1).csv")  # Adjust path if needed
+
+
+
 
 @app.route('/dropdown-options', methods=['GET'])
 def dropdown_options():
@@ -46,6 +50,12 @@ def predict():
 
     return jsonify({'prediction': label})
 
+@app.route('/')
+def index():
+    return render_template('index.html')  # Renders index.html by default
+
+
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+    # app.run(host='0.0.0.0', port=5000)
+    app.run(debug=True, port=5000)
 

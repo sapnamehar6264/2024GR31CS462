@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sapna-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sapna-app
+  template:
+    metadata:
+      labels:
+        app: sapna-app
+    spec:
+      containers:
+      - name: sapna-container
+        image: sapna62/sapna-app  
+        ports:
+        - containerPort: 5000          
