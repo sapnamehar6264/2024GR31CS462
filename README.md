@@ -9,29 +9,11 @@ We have prepared a video walkthrough explaining the project development, approac
 This project aims to optimize 5G network parameters using machine learning models.
 It includes a frontend (React.js), backend (Flask), ML model training, and Kubernetes deployment setup.
 
-5G-Network-Optimization/
-├── client/                 # React.js frontend application
-│   ├── public/             # Static files for frontend
-│   └── src/                # React source files (components, API calls)
-├── k8s/                    # Kubernetes manifests (deployment and service)
-├── model/                  # (Placeholder for trained ML models or related code)
-├── node_modules/           # Node dependencies (for client and root)
-├── static/                 # Static files served by Flask backend
-│   └── style.css           # CSS for frontend templates
-├── templates/              # HTML templates for Flask backend
-│   └── index.html
-├── app.py                  # Flask backend application
-├── train_model.py          # Script to train the ML model
-├── docker-compose.yml      # Docker Compose setup for local development
-├── Dockerfile              # Dockerfile to containerize the Flask app
-├── package.json            # Node.js project config (frontend)
-├── package-lock.json       # Node.js lock file (frontend)
-├── requirements.txt        # Python dependencies for backend
-├── deployment.yaml         # Kubernetes deployment configuration
-├── service.yaml            # Kubernetes service configuration
-├── .dockerignore           # Files to ignore in Docker builds
-├── .gitignore              # Files to ignore in Git
-└── README.md               # Project documentation
+# 📁 Project Structure
+
+Here is the overall file structure of the project:
+
+![File Structure](static/file-structure.png)
 
 Getting Started
 1. Clone the Repository
