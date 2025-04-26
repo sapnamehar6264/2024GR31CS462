@@ -73,4 +73,4 @@ Deployment: Kubernetes
 Rajan Patel (202251093)
 Sapna Mehar (202252336)
 Tanishka Sharma (202251140)
-Pari Ranasaria (202252083)
+Pari Ranasaria (202251084)
